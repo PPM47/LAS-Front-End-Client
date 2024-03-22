@@ -177,20 +177,20 @@ export const SideNav = () => {
         </div>
         {/* ------------nav itmes--end----------------- */}
         <div className={`logout-con ${isNavOpen ? "logout-con-active" : ""}`}>
-          <span className="admin-span">Welcome Admin</span>
+          <span className="admin-span">Welcome Patient</span>
           <Link
             className={`${isNavOpen ? "logout-active" : "logout"}`}
-            to="/adminlogin"
+            to=""
           >
             <Link
               className={`${
                 isNavOpen ? "nav-item-con-a-active" : "nav-item-con-a"
               }`}
-              to="/adminlogin"
+              to=""
             >
               Log Out
             </Link>
-            <Link className="all-a-icons" to="/adminlogin">
+            <Link className="all-a-icons" to="">
               <TbLogout className="nav-item-icon" />
             </Link>
           </Link>
