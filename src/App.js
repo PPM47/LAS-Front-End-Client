@@ -24,7 +24,7 @@ function App() {
   return (
     <>
     <Routes>
-    <Route path="/adminlogin" index element={<AdminLogin/>} />
+    <Route path="" index element={<AdminLogin/>} />
     </Routes>
       
       <div className="page-layout-main">
@@ -41,7 +41,7 @@ function App() {
             <Route path="/payment" element={<Payment />} />
             <Route path="/TestReport" element={<TestReport />} />
             <Route path="/PatientUpDel" element={<PatientUpDel />} />
-            <Route path="*" element={<NoPage />} />
+            <Route path="/*" element={<NoPage />} />
           </Routes>
         </div>
       </div>
