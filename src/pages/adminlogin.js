@@ -4,6 +4,8 @@ import FormInput from "../components/formInput";
 import { RiAdminLine } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import Img1 from "../png/1.png";
+import Img2 from "../png/lab-technician-mask-examines-test-tubes-utilizes-microscope-analysis.webp";
 export default function AdminLogin() {
   const [logvalues, setValues] = useState({
     email: "",
@@ -64,6 +66,9 @@ export default function AdminLogin() {
   console.log(logvalues);
   return (
     <div className="login-page-main-continer">
+     
+       <div className="bg-blur"> <img className="welcom-img-bg" src={Img2} alt="" /></div>
+      {/* <img className="welcom-img-login" src={Img1} alt="" /> */}
       <div className="login-main-continer">
         <section className="form-main-continer login-main">
           <div className="form-name-logo-con">
@@ -71,8 +76,11 @@ export default function AdminLogin() {
               <RiAdminLine />
             </div>
             <div className="form-name-con" >
-              <span>Admin LogIn</span>
-            </div>
+              <span>ABC Laboratories</span>
+            </div> 
+            <div className="form-name-con" >
+              <span>Sign In</span>
+            </div>  
           </div>
 
           <form className="admin-log-form" onSubmit={handleLogin}>
@@ -86,7 +94,7 @@ export default function AdminLogin() {
               />
             ))}
 
-            <button>LogIn</button>
+            <button>Sign In</button>
           </form>
       
         </section>
