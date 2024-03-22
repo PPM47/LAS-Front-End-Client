@@ -58,7 +58,7 @@ export default function Registration() {
     setIsLoding(false);
   }
   console.log(values);
-  //--------------------------------------------------------------------
+  //--------------------------patient delete------------------------------------------
   const [deletevalues, setDValues] = useState({
     patientId: "",
     email: "",
@@ -91,6 +91,7 @@ export default function Registration() {
     }
     setDIsLoding(false);
   }
+    //--------------------------patient delete------------------------------------------
   //--------------------------------------------------------------------
   
   console.log(deletevalues);
@@ -255,11 +256,32 @@ export default function Registration() {
   return (
     <main className="reg-from-center">
       <div className="page-name-con">
+      <div className="page-bg-min-con-nav">
+          <div className="page-background-nav page-back-1-nav">
+           
+            <CiMedicalCross />
+          </div>
+          <div className="page-background-nav page-back-3-nav">
+            
+            <CiMedicalCross />
+          </div>
+          <div className="page-background-nav page-back-2-nav">
+            <FaHandHoldingMedical />
+          </div>
+          <div className="page-background-nav page-back-4-nav">
+          <CiMedicalClipboard />
+          <FaHouseMedical />
+          </div>
+         
+          <div className="page-background-nav page-back-5-nav">
+            <CiMedicalClipboard />
+          </div>
+        </div>
         <div className="page-name-spaceholder"></div>
         <span className="page-log-span">
           <FaUserFriends />
         </span>
-        <h1 className="page-name-h1">Patient Update/Delete</h1>
+        <h1 className="page-name-h1">Patient Update</h1>
       </div>
 
       <section className="form-main-continer">
@@ -320,8 +342,8 @@ export default function Registration() {
           disabled={isLoding}
           >Update</button>
         </form>
-
-        <div className="form-name-logo-con">
+        {/* //--------------------------patient delete------------------------------------------ */}
+        {/* <div className="form-name-logo-con">
           <div className="form-icon-con">
             <TiUserDelete />
           </div>
@@ -343,8 +365,8 @@ export default function Registration() {
           <button
           disabled={disLoding}
           >Delete</button>
-        </form>
-        
+        </form> */}
+        {/* //--------------------------patient delete------------------------------------------ */}
       </section>
     </main>
   );

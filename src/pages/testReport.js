@@ -9,50 +9,50 @@ import FormInput from "../components/formInput";
 
 import { useState } from "react";
 export default function TestReport() {
-  const [values, setValues] = useState({
-    appointmentId: "",
-    testCatagory: "",
-    email: "",
-    chloride: "",
-    proteins: "",
-    sugar: "",
-    polymorphs: "",
-    lymphocytes: "",
-    anyother: "",
-  });
+  // const [values, setValues] = useState({
+  //   appointmentId: "",
+  //   testCatagory: "",
+  //   email: "",
+  //   chloride: "",
+  //   proteins: "",
+  //   sugar: "",
+  //   polymorphs: "",
+  //   lymphocytes: "",
+  //   anyother: "",
+  // });
 
-  const [isLoding, setIsLoding] = useState(false);
+  // const [isLoding, setIsLoding] = useState(false);
 
-  const onChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsLoding(true);
-    try {
-      const responce = await axios.post(
-        "http://localhost:9098/api/testReport/reportSubmit",
-        {
-          appointmentId: values.appointmentId,
-          testCatagory: values.testCatagory,
-          email: values.email,
-          chloride: values.chloride,
-          proteins: values.proteins,
-          sugar: values.sugar,
-          polymorphs: values.polymorphs,
-          lymphocytes: values.lymphocytes,
-          anyother: values.anyother,
-        }
-      );
-      alert("Patient Registration Successful");
-      setIsLoding(false);
-    } catch (err) {
-      console.log(err);
-      alert("Patient Registration Failure!", err);
-      setIsLoding(false);
-    }
-  };
-    //------------------------------test report search--------------------------------------
+  // const onChange = (e) => {
+  //   setValues({ ...values, [e.target.name]: e.target.value });
+  // };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsLoding(true);
+  //   try {
+  //     const responce = await axios.post(
+  //       "http://localhost:9098/api/testReport/reportSubmit",
+  //       {
+  //         appointmentId: values.appointmentId,
+  //         testCatagory: values.testCatagory,
+  //         email: values.email,
+  //         chloride: values.chloride,
+  //         proteins: values.proteins,
+  //         sugar: values.sugar,
+  //         polymorphs: values.polymorphs,
+  //         lymphocytes: values.lymphocytes,
+  //         anyother: values.anyother,
+  //       }
+  //     );
+  //     alert("Patient Registration Successful");
+  //     setIsLoding(false);
+  //   } catch (err) {
+  //     console.log(err);
+  //     alert("Patient Registration Failure!", err);
+  //     setIsLoding(false);
+  //   }
+  // };
+  //------------------------------test report search--------------------------------------
   const [trsvalues, settrsValues] = useState({
     appointmentId: "",
   });
@@ -79,7 +79,6 @@ export default function TestReport() {
     }
   };
   const trsinput = [
-   
     {
       id: 30,
       inpuConClass: "fromInput field-con",
@@ -90,79 +89,78 @@ export default function TestReport() {
       label: "Appointment ID",
       required: true,
     },
-  
   ];
- //------------------------------test report search--------------------------------------
+  //------------------------------test report search--------------------------------------
 
   //------------------------test report Delete--------------------------------------------
-//   const [deletevalues, setDValues] = useState({
-//     appointmentId: "",
-//     patientId: "",
-//     email: "",
-//   });
-//   const [disLoding, setDIsLoding] = useState(false);
-//   const onDChange = (e) => {
-//     setDValues({ ...deletevalues, [e.target.name]: e.target.value });
-//   };
-//   //handleDeleteSubmit
-//   const handleDeleteSubmit = async (e) => {
-//     e.preventDefault();
-//     setDIsLoding(true);
-//     try {
-//       const responce = await axios.delete(
-//         `http://localhost:9098/api/appointment/delete/${deletevalues.appointmentId}`,
-//         {
-//           data: {
-//             patientId: deletevalues.patientId,
-//             email: deletevalues.email,
-//           },
-//         }
-//       );
-//       alert("Appointment Cancel Successful");
-//     } catch (err) {
-//       console.log(err);
-//       alert("Appointment Cancel Failure!");
-//     }
-//     setDIsLoding(false);
-//   };
+  //   const [deletevalues, setDValues] = useState({
+  //     appointmentId: "",
+  //     patientId: "",
+  //     email: "",
+  //   });
+  //   const [disLoding, setDIsLoding] = useState(false);
+  //   const onDChange = (e) => {
+  //     setDValues({ ...deletevalues, [e.target.name]: e.target.value });
+  //   };
+  //   //handleDeleteSubmit
+  //   const handleDeleteSubmit = async (e) => {
+  //     e.preventDefault();
+  //     setDIsLoding(true);
+  //     try {
+  //       const responce = await axios.delete(
+  //         `http://localhost:9098/api/appointment/delete/${deletevalues.appointmentId}`,
+  //         {
+  //           data: {
+  //             patientId: deletevalues.patientId,
+  //             email: deletevalues.email,
+  //           },
+  //         }
+  //       );
+  //       alert("Appointment Cancel Successful");
+  //     } catch (err) {
+  //       console.log(err);
+  //       alert("Appointment Cancel Failure!");
+  //     }
+  //     setDIsLoding(false);
+  //   };
 
-//   //-----------------------------test report Delete---------------------------------------
-//   console.log(values);
-//   console.log(deletevalues);
+  //   //-----------------------------test report Delete---------------------------------------
+  //   console.log(values);
+  //   console.log(deletevalues);
 
-//   const deleteinputs = [
-//     {
-//       id: 31,
-//       inpuConClass: "fromInput field-con",
-//       name: "patientId",
-//       placeholder: "Patient ID",
-//       type: "text",
-//       errorMessage: "Patient ID should be 6 characters long",
-//       label: "Patient ID",
-//       required: true,
-//     },
+  //   const deleteinputs = [
+  //     {
+  //       id: 31,
+  //       inpuConClass: "fromInput field-con",
+  //       name: "patientId",
+  //       placeholder: "Patient ID",
+  //       type: "text",
+  //       errorMessage: "Patient ID should be 6 characters long",
+  //       label: "Patient ID",
+  //       required: true,
+  //     },
 
-//     {
-//       id: 30,
-//       inpuConClass: "fromInput field-con",
-//       name: "appointmentId",
-//       placeholder: "Appointment ID",
-//       type: "text",
-//       errorMessage: "Appointment ID should be 8 characters long",
-//       label: "Appointment ID",
-//       required: true,
-//     },
-//     {
-//       id: 32,
-//       inpuConClass: "fromInput field-con",
-//       name: "email",
-//       placeholder: "Email",
-//       type: "email",
-//       errorMessage: "Please enter a valid email address",
-//       label: "Email",
-//       required: true,
-//     },
-//   ];
+  //     {
+  //       id: 30,
+  //       inpuConClass: "fromInput field-con",
+  //       name: "appointmentId",
+  //       placeholder: "Appointment ID",
+  //       type: "text",
+  //       errorMessage: "Appointment ID should be 8 characters long",
+  //       label: "Appointment ID",
+  //       required: true,
+  //     },
+  //     {
+  //       id: 32,
+  //       inpuConClass: "fromInput field-con",
+  //       name: "email",
+  //       placeholder: "Email",
+  //       type: "email",
+  //       errorMessage: "Please enter a valid email address",
+  //       label: "Email",
+  //       required: true,
+  //     },
+  //   ];
   //---------------------------test report Delete-----------------------------------------
 
   const selectapinputs = [
@@ -271,10 +269,29 @@ export default function TestReport() {
     },
   ];
 
-  console.log(values);
+  // console.log(values);
   return (
     <main className="reg-from-center">
       <div className="page-name-con">
+      <div className="page-bg-min-con-nav">
+          <div className="page-background-nav page-back-1-nav">
+            <FaHouseMedical />
+            <FaHandHoldingMedical />
+          </div>
+          <div className="page-background-nav page-back-2-nav">
+            <CiMedicalCross />
+          </div>
+          <div className="page-background-nav page-back-4-nav">
+            <CiMedicalCross />
+          </div>
+          <div className="page-background-nav page-back-5-nav">
+           
+            <FaHouseMedical />
+          </div>
+          <div className="page-background-nav page-back-3-nav">
+            <CiMedicalClipboard />
+          </div>
+        </div>
         <div className="page-name-spaceholder"></div>
         <span className="page-log-span">
           <HiOutlineClipboardList />
@@ -300,15 +317,15 @@ export default function TestReport() {
             <CiMedicalClipboard />
           </div>
         </div>
-        <div className="form-name-logo-con">
+        {/* <div className="form-name-logo-con">
           <div className="form-icon-con">
             <HiOutlineClipboardList />
           </div>
           <div className="form-name-con">
             <span>Report Submit</span>
           </div>
-        </div>
-
+        </div> */}
+        {/* 
         <form className="reg-from-con" method="POST" onSubmit={handleSubmit}>
           {selectapinputs.map((input) => (
             <SelectDrop
@@ -328,7 +345,7 @@ export default function TestReport() {
           ))}
 
           <button disabled={isLoding}>Submit</button>
-        </form>
+        </form> */}
         {/* -------------------------------delete test report-------------------------------------- */}
         {/* <div className="form-name-logo-con">
           <div className="form-icon-con">
@@ -353,18 +370,12 @@ export default function TestReport() {
         {/* -------------------------------delete test report-------------------------------------- */}
         {/* --------------------------search test report------------------------------------------- */}
         <div className="form-name-logo-con">
-          <div className="form-icon-con">
-            
-          </div>
+          <div className="form-icon-con"></div>
           <div className="form-name-con">
             <span>View Test Report</span>
           </div>
         </div>
-        <form
-          className="reg-from-con"
-          onSubmit={fetchTestReport}
-          method="POST"
-        >
+        <form className="reg-from-con" onSubmit={fetchTestReport} method="POST">
           {trsinput.map((input) => (
             <FormInput
               key={input.id}
@@ -374,9 +385,7 @@ export default function TestReport() {
             />
           ))}
 
-          <button disabled={istrsLoding}>
-            Search
-          </button>
+          <button disabled={istrsLoding}>Search</button>
         </form>
         <h1 className="table-h1">Test Reports</h1>
         <div className="table-main-con">
@@ -406,13 +415,12 @@ export default function TestReport() {
                   <td>{testReports.polymorphs}</td>
                   <td>{testReports.lymphocytes}</td>
                   <td>{testReports.anyother}</td>
-                 
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-         {/* --------------------------search test report------------------------------------------- */}
+        {/* --------------------------search test report------------------------------------------- */}
       </section>
     </main>
   );

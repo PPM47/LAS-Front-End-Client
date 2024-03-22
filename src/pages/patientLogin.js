@@ -43,8 +43,32 @@ export default function PatientLogin() {
   return (
     <>
       <div className="login-main-continer">
+      <div className="page-bg-min-con-nav">
+          <div className="page-background-nav page-back-1-nav">
+           
+            <CiMedicalCross />
+          </div>
+          <div className="page-background-nav page-back-3-nav">
+            
+            <CiMedicalCross />
+          </div>
+          <div className="page-background-nav page-back-2-nav">
+            <FaHandHoldingMedical />
+          </div>
+          <div className="page-background-nav page-back-4-nav">
+          <CiMedicalClipboard />
+          <FaHouseMedical />
+          </div>
+         
+          <div className="page-background-nav page-back-5-nav">
+            <CiMedicalClipboard />
+          </div>
+        </div>
         <section className="form-main-continer login-main">
+          
+          
           <div className="form-name-logo-con">
+            
             <div className="form-icon-con">
               <RiAdminLine />
             </div>

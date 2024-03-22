@@ -23,11 +23,9 @@ function App() {
   // const [logindata, setdata] = useState();
   return (
     <>
-   
     <Routes>
     <Route path="" index element={<AdminLogin/>} />
     </Routes>
-   
       
       <div className="page-layout-main">
         <div className="spaceholder">
@@ -43,7 +41,7 @@ function App() {
             <Route path="/payment" element={<Payment />} />
             <Route path="/TestReport" element={<TestReport />} />
             <Route path="/PatientUpDel" element={<PatientUpDel />} />
-            <Route path="*" element={<NoPage />} />
+            <Route path="/*" element={<NoPage />} />
           </Routes>
         </div>
       </div>
