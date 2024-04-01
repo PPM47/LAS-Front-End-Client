@@ -140,6 +140,7 @@ export default function Registration() {
         inpuConClass: "fromInput field-con",
         name: "patientId",
         placeholder: "Patient ID",
+        maxLength: "6",
         type: "text",
         errorMessage:
           "Patient ID should be 6 characters long",

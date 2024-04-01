@@ -1,7 +1,7 @@
 import "../styles/component.css";
 import "../styles/layout.css";
 import Welcom from "../png/66_generated.png";
-import Glyphicon from "../png/image-from-rawpixel-id-3819993-png.png";
+import Glyphicon from "../png/pngegg(16).png";
 import Img1 from "../png/1.png";
 import { CiMedicalCross, CiMedicalClipboard } from "react-icons/ci";
 import { FaHandHoldingMedical, FaHouseMedical } from "react-icons/fa6";

@@ -4,7 +4,7 @@ import FormInput from "../components/formInput";
 import { RiAdminLine } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
-import Img1 from "../png/1.png";
+import Img1 from "../png/66_generated.png";
 import Img2 from "../png/lab-technician-mask-examines-test-tubes-utilizes-microscope-analysis.webp";
 export default function AdminLogin() {
   const [logvalues, setValues] = useState({
@@ -26,12 +26,12 @@ export default function AdminLogin() {
           email: logvalues.email,
           password: logvalues.password
          });
-         alert("Admin Login Successful");
+         alert("Patient Login Successful");
         console.log(response.data); // Handle success
         navigate('/app'); // Redirect to main page
     } catch (error) {
         console.error('Login failed:', error.response.data); // Handle error
-        alert("Admin Login Failure!");
+        alert("Patient Login Failure!");
     }
 };
 
@@ -68,7 +68,7 @@ export default function AdminLogin() {
     <div className="login-page-main-continer">
      
        <div className="bg-blur"> <img className="welcom-img-bg" src={Img2} alt="" /></div>
-      {/* <img className="welcom-img-login" src={Img1} alt="" /> */}
+   
       <div className="login-main-continer">
         <section className="form-main-continer login-main">
           <div className="form-name-logo-con">
@@ -76,10 +76,10 @@ export default function AdminLogin() {
               <RiAdminLine />
             </div>
             <div className="form-name-con" >
-              <span>ABC Laboratories</span>
+             
             </div> 
             <div className="form-name-con" >
-              <span>Sign In</span>
+              <span className="Login-main-text">Welcome Back</span>
             </div>  
           </div>
 
